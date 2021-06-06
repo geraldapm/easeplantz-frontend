@@ -52,7 +52,7 @@ class Feature extends Component {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> 
          );
     }
 }
