@@ -1,26 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/header';
-import Footer from './components/footer';
-import HeroSlide from './components/heroSlide';
-import About from './components/about';
-import Feature from './components/feature';
-import Choseus from './components/choseus';
-import Video from './components/video';
-import PredictList from './components/predictList';
+import App from './app';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Header/>
-        <HeroSlide/>
-        <About/>
-        <Feature/>
-        <Choseus/>
-        <Video/>
-        <PredictList/>
-        <Footer/>
-    </React.StrictMode>,
+    <App/>,
     document.getElementById('root')
 );
 

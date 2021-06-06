@@ -32,7 +32,7 @@ class Feature extends Component {
                         <div className="row">
                             <div className="col-lg-7 m-auto text-center">
                                 <div className="section-title pl-lg-4 pr-lg-4 pl-0 pr-0">
-                                    <h2>PREDICTIONS</h2>
+                                    <h2>{this.props.title || ""}</h2>
                                     <p>Predict your plants now with Machine Learning technology! List of plants ready to predict is listed below:</p>
                                 </div>
                             </div>
