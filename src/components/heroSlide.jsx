@@ -12,9 +12,9 @@ class HeroSlide extends Component {
     render() { 
         return (
             <section className="hero-section">
-                <OwlCarousel className="hero-items owl-carousel" loop items={1} nav>
+                <OwlCarousel className="hero-items owl-carousel" loop items={1} nav navText={['<i style="font-size: 60px; color: #ffffff" class="arrow_carrot-left"></i>','<i style="font-size: 60px; color: #ffffff" class="arrow_carrot-right"></i>']}>
                     {this.bg.map(bgs => (
-                        <div className="single-hero-item set-bg" style={{ backgroundImage: "url("+bgs+")"}}>
+                        <div key={bgs} className="single-hero-item set-bg" style={{ backgroundImage: "url("+bgs+")"}}>
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-12">

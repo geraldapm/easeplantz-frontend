@@ -35,11 +35,11 @@ class PredictList extends Component {
                     <div className="row blog-gird">
                         <div className="grid-sizer"></div>
                         {files.map(file => (
-                            <div className="col-lg-4 col-md-6 grid-item">
+                            <div key={file.url} className="col-lg-4 col-md-6 grid-item">
                                 <div className="blog-item large-item set-bg" style={{ backgroundImage: "url("+file.url+")"}}>
                                     <a href={file.url} className="blog-text">
-                                        <div className="categories">{file.prediction}</div>
                                         <h5>{file.disease}</h5>
+                                        <div className="categories">{file.prediction + '%'}</div>
                                     </a>
                                 </div>
                             </div>

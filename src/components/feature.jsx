@@ -42,7 +42,7 @@ class Feature extends Component {
                 <div className="container-fluid">
                     <div className="row">
                         {features.map(feature => (
-                            <div className="col-md-4">
+                            <div key={feature.model} className="col-md-4">
                                 <div className="feature-item set-bg" style={{ backgroundImage: "url("+feature.img+")"}}>
                                     <h3>{feature.title}</h3>
                                     <p>{feature.desc}</p>
