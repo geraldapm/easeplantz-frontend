@@ -35,7 +35,7 @@ class UploadPrediction extends Component {
   }
 
   fileUpload(file){
-    const url = '/upload?model=' + this.props.model;
+    const url = 'http://localhost:5000/upload?model=' + this.props.model;
     const formData = new FormData();
     formData.append('predict-img',file)
     const config = {

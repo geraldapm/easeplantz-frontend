@@ -14,7 +14,7 @@ class PredictList extends Component {
     
     componentDidMount(){
         if (this.props.model) {
-            axios.get(`/upload?model=${this.props.model}`)
+            axios.get(`http://localhost:5000/upload?model=${this.props.model}`)
             .then(res => {
             const data = res.data;
             const {files} = data.data;
@@ -22,7 +22,7 @@ class PredictList extends Component {
             this.setState({ files });
             })   
         } else {
-            axios.get(`/upload`)
+            axios.get(`http://localhost:5000/upload`)
             .then(res => {
             const data = res.data;
             console.log(data);
