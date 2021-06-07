@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {useLocation, BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/header';
 import Footer from './components/footer';
 import HeroSlide from './components/heroSlide';
@@ -11,7 +11,6 @@ import PredictList from './components/predictList';
 import BreadCrumb from './components/breadcrumb';
 import AboutUs from './components/aboutUs';
 import OurTeam from './components/ourTeam';
-
 
 class DebugRouter extends BrowserRouter {
     constructor(props){
@@ -26,9 +25,51 @@ class DebugRouter extends BrowserRouter {
     }
   }
 
+function Prediction() {
+  const { search } = useLocation();
+  const match = search.match(/model=(.*)/);
+  const model = match?.[1];
+  return (
+    <>
+      {model === 'corn' && 
+      <>
+        <Header type="header-normal"/>
+        <BreadCrumb title="Corn Predictions"/>
+        <Feature/>
+        <PredictList model='corn'/>
+      </>}
+      {model === 'potato' && 
+      <>
+        <Header type="header-normal"/>
+        <BreadCrumb title="Potato Predictions"/>
+        <Feature/>
+        <PredictList model='potato'/>
+      </>}
+      {model === 'tomato' && 
+      <>
+        <Header type="header-normal"/>
+        <BreadCrumb title="Tomato Predictions"/>
+        <Feature/>
+        <PredictList model='tomato'/>
+      </>}
+      {model === undefined && 
+      <>
+        <Header type="header-normal"/>
+        <BreadCrumb title="Predictions"/>
+        <Feature/>
+        <PredictList/>
+      </>}
+    </>
+  );
+}
+
 function App() {
   return (
         <DebugRouter>
+              <div id="preloder">
+                    <div className="loader"> 	<img  src="assets/img/ease-logo.png" alt=""/>  </div>
+                    <div className="loader2"> 	<img  src="assets/img/ease-type.png" alt=""/>  </div>
+              </div>
             <Switch>
                 <Route exact path="/" name="Home">
                     <Header/>
@@ -46,10 +87,7 @@ function App() {
                     <OurTeam/>
                 </Route>
                 <Route path="/prediction" name="Prediction">
-                    <Header type="header-normal"/>
-                    <BreadCrumb title="Predictions"/>
-                    <Feature/>
-                    <PredictList/>
+                    <Prediction/>
                 </Route>
             </Switch>
             <Footer/>

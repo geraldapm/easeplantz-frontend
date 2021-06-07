@@ -35,10 +35,6 @@ class Header extends Component {
         const {menu, dropdown} = this.state;
         return (
             <React.Fragment>
-                <div id="preloder">
-                    <div className="loader"> 	<img  src="assets/img/ease-logo.png" alt=""/>  </div>
-                    <div className="loader2"> 	<img  src="assets/img/ease-type.png" alt=""/>  </div>
-                </div>
                 <header className={'header-section ' + this.props.type}>
                     <div className="container-fluid">
                         <div className="logo">
@@ -58,9 +54,9 @@ class Header extends Component {
                                         <li><Link to="/about" role="menuitem">About us</Link></li>
                                         <li><Link to="/prediction" >Predictions</Link>
                                             <ul className="dropdown">
-                                                <li><a href="./about-us.html">Corn Prediction</a></li>
-                                                <li><a href="./blog-single.html">Potato Prediction</a></li>
-                                                <li><a href="./blog-single.html">Tomato Prediction</a></li>
+                                                <li><Link to="/prediction?model=corn">Corn Prediction</Link></li>
+                                                <li><Link to="/prediction?model=potato">Potato Prediction</Link></li>
+                                                <li><Link to="/prediction?model=tomato">Tomato Prediction</Link></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -84,9 +80,9 @@ class Header extends Component {
                                         <li className="slicknav_collapsed slicknav_parent"><a onClick={this.setDrop} role="menuitem" aria-haspopup="true" tabIndex="-1" className="slicknav_item slicknav_row" style={{outline: 'currentcolor none medium'}}>
                                             <Link to="/prediction" >Predictions</Link>
                                             <span className="slicknav_arrow">►</span></a><ul className="dropdown slicknav_hidden" role="menu" style={dropdown} aria-hidden="true">
-                                                <li><a href="./about-us.html" role="menuitem" tabIndex="-1">Corn Prediction</a></li>
-                                                <li><a href="./blog-single.html" role="menuitem" tabIndex="-1">Potato Prediction</a></li>
-                                                <li><a href="./blog-single.html" role="menuitem" tabIndex="-1">Tomato Prediction</a></li>
+                                                <li><Link to="/prediction?model=corn" role="menuitem" tabIndex="-1">Corn Prediction</Link></li>
+                                                <li><Link to="/prediction?model=potato" role="menuitem" tabIndex="-1">Potato Prediction</Link></li>
+                                                <li><Link to="/prediction?model=tomato" role="menuitem" tabIndex="-1">Tomato Prediction</Link></li>
                                             </ul>
                                         </li>
                                     </ul>
