@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios, { post } from 'axios';
+import { post } from 'axios';
 import PredictList from './predictList';
 
 class UploadPrediction extends Component {

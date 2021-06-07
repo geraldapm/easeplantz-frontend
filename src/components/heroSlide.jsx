@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -21,7 +22,7 @@ class HeroSlide extends Component {
                                         <div className="hero-text">
                                             <h2>Welcome To</h2>
                                             <h1>EASEPLANTZ</h1>
-                                            <a href="#" className="primary-btn">Read More</a>
+                                            <Link to="/" className="primary-btn">Read More</Link>
                                         </div>
                                     </div>
                                 </div>
