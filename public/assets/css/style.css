@@ -132,8 +132,8 @@ ol {
 }
 
 .spad {
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .spad-2 {
@@ -2581,7 +2581,7 @@ item .hero-text .primary-btn {
 	background: #2d2d2d;
 	border: none;
 	padding-left: 20px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	font-size: 16px;
 	color: #a6a6a6;
 	-webkit-transition: all 0.3s;

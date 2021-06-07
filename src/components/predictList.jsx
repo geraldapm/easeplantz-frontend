@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
 class PredictList extends Component {
     state = { 
         files: [
@@ -7,18 +9,33 @@ class PredictList extends Component {
                 prediction: '95.122',
                 url: 'assets/img/blog/blog-1.jpg',
             },
-            {
-                disease: 'Late Blight',
-                prediction: '92.122',
-                url: 'assets/img/blog/blog-2.jpg',
-            },
-            {
-                disease: 'Common Rust',
-                prediction: '91.122',
-                url: 'assets/img/blog/blog-3.jpg',
-            }
         ],
-     }
+    }
+    
+    componentDidMount(){
+        if (this.props.model) {
+            axios.get(`/upload?model=${this.props.model}`)
+            .then(res => {
+            const data = res.data;
+            const {files} = data.data;
+            console.log(files);
+            this.setState({ files });
+            })   
+        } else {
+            axios.get(`/upload`)
+            .then(res => {
+            const data = res.data;
+            const {files} = data.data;
+            console.log(files);
+            if (this.props.limit) {
+                files.splice(this.props.limit, files.length);
+            }
+
+            this.setState({ files });
+            })   
+        }
+    }
+
     render() {
         const {files} = this.state;
         return (

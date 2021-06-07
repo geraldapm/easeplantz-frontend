@@ -38,9 +38,9 @@ class Header extends Component {
                 <header className={'header-section ' + this.props.type}>
                     <div className="container-fluid">
                         <div className="logo">
-                            <a href="./index.html">
+                            <Link to="/">
                                 <img src="assets/img/ease-land.png" alt=""/>
-                            </a>
+                            </Link>
                         </div>
                         <div className="top-social">
                             <a href="#"><i className="fa fa-youtube-play"></i></a>

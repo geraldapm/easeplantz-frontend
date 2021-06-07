@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 class Feature extends Component {
     state = { 
@@ -46,7 +47,7 @@ class Feature extends Component {
                                 <div className="feature-item set-bg" style={{ backgroundImage: "url("+feature.img+")"}}>
                                     <h3>{feature.title}</h3>
                                     <p>{feature.desc}</p>
-                                    <a href="#" className="primary-btn f-btn">Predict</a>
+                                    <Link to={"/prediction?model=" + feature.model} className="primary-btn f-btn">Predict</Link>
                                 </div>
                             </div>
                         ))}

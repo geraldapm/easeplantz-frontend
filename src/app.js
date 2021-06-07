@@ -11,6 +11,7 @@ import PredictList from './components/predictList';
 import BreadCrumb from './components/breadcrumb';
 import AboutUs from './components/aboutUs';
 import OurTeam from './components/ourTeam';
+import UploadPrediction from './components/uploadPred';
 
 class DebugRouter extends BrowserRouter {
     constructor(props){
@@ -35,22 +36,22 @@ function Prediction() {
       <>
         <Header type="header-normal"/>
         <BreadCrumb title="Corn Predictions"/>
+        <UploadPrediction model="corn"/>
         <Feature/>
-        <PredictList model='corn'/>
       </>}
       {model === 'potato' && 
       <>
         <Header type="header-normal"/>
         <BreadCrumb title="Potato Predictions"/>
+        <UploadPrediction model="potato"/>
         <Feature/>
-        <PredictList model='potato'/>
       </>}
       {model === 'tomato' && 
       <>
         <Header type="header-normal"/>
         <BreadCrumb title="Tomato Predictions"/>
+        <UploadPrediction model="tomato"/>
         <Feature/>
-        <PredictList model='tomato'/>
       </>}
       {model === undefined && 
       <>
@@ -78,7 +79,7 @@ function App() {
                     <Feature title="PREDICTIONS"/>
                     <Choseus/>
                     <Video/>
-                    <PredictList/>
+                    <PredictList limit={3}/>
                 </Route>
                 <Route path="/about" name="About Us">
                     <Header type="header-normal"/>
