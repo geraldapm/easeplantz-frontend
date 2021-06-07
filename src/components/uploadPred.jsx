@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { post } from 'axios';
 import PredictList from './predictList';
+import host from './host';
 
 class UploadPrediction extends Component {
     
@@ -35,7 +36,7 @@ class UploadPrediction extends Component {
   }
 
   fileUpload(file){
-    const url = 'https://api.easeplantz.ml/upload?model=' + this.props.model;
+    const url = host + '?model=' + this.props.model;
     const formData = new FormData();
     formData.append('predict-img',file)
     const config = {

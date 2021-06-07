@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import host from './host';
 
 class PredictList extends Component {
     state = { 
@@ -14,7 +15,7 @@ class PredictList extends Component {
     
     componentDidMount(){
         if (this.props.model) {
-            axios.get(`https://api.easeplantz.ml/upload?model=${this.props.model}`)
+            axios.get(`${host}?model=${this.props.model}`)
             .then(res => {
             const data = res.data;
             const {files} = data.data;
@@ -22,7 +23,7 @@ class PredictList extends Component {
             this.setState({ files });
             })   
         } else {
-            axios.get(`https://api.easeplantz.ml/upload`)
+            axios.get(`${host}`)
             .then(res => {
             const data = res.data;
             console.log(data);
