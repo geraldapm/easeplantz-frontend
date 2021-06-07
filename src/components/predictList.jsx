@@ -25,6 +25,7 @@ class PredictList extends Component {
             axios.get(`/upload`)
             .then(res => {
             const data = res.data;
+            console.log(data);
             const {files} = data.data;
             console.log(files);
             if (this.props.limit) {
