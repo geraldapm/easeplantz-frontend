@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { post } from 'axios';
 import PredictList from './predictList';
 import host from './host';
+import recommendations from './labels';
 
 class UploadPrediction extends Component {
     
@@ -48,6 +49,12 @@ class UploadPrediction extends Component {
   }
     render() { 
         if (this.state.status === 'success') {
+            let index;
+            if (this.props.model === 'corn') index = recommendations.corn.filter((n) => n.label === this.state.disease)[0];
+            else if (this.props.model === 'potato') index = recommendations.potato.filter((n) => n.label === this.state.disease)[0];
+            else if (this.props.model === 'tomato') index = recommendations.tomato.filter((n) => n.label === this.state.disease)[0];
+            else return;
+
             return (
                 <section className="blog-single-section spad">
                 <div className="container">
@@ -55,6 +62,8 @@ class UploadPrediction extends Component {
                         <div className="col-lg-12">
                         <div class="recent-news">
                             <h4>Prediction Success</h4>
+                            <h5>Recommendations:</h5>
+                            <p>{index.desc}</p>
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="recent-item set-bg" style={{ backgroundImage: "url("+this.state.url+")"}}>
