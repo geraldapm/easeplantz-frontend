@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Easeplantz Front-End Service
 
+![Easeplantz logo](public/assets/img/ease-land.png)
+
+Easeplantz Front-End Service is a Service that provides a web application interface for online predictions and our profile website.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+For further explorations about our website, please visit [This Link.](https://www.easeplantz.ml)
 
-In the project directory, you can run:
+<!-- MarkdownTOC levels="1,2,3" autolink="true"  -->
+- [Overview](#overview)
+- [List of Menu](#list-of-methods)
+    - [Index](#index)
+    - [About Us](#about-us)
+    - [Prediction Service](#prediction-service)
+- [Contributor](#contributor)
+<!-- /MarkdownTOC -->
 
-### `npm start`
+# Overview
+This Frontend Service has three main service installed on it:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Index**: Service for displaying main webpage in Easeplantz Front-end service.
+- **About Us**: Service that displaying about-us page and our team profile.
+- **Prediction Services**: Services to predict plant diseases instantly by uploading the images on the web application.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## List of Menu
+Here are the details of the Front-end services displayed on the easeplantz websites:
 
-### `npm test`
+### Index
+This Index page displays the home page, the carousel picture, summary of our services and list of predicted plants in summary.
+![Index Page](readme-img/index.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### About Us
+This About Us page displays about our team profile, and the reasons behind the Easeplantz project in summary.
+![About Us Page](readme-img/about-us.png)
 
-### `npm run build`
+### Prediction Service
+The Prediction service page displays all of the predicted plants histories. This page has three sub-pages: corn prediction, potato prediction, and tomato prediction. each of these sub-pages corresponds on their plant diseases prediction services.
+![Predictions Page](readme-img/predict.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributor
+This Easeplantz Backend Repository was a part of the Easeplantz Capstone Project from Bangkit Academy 2021 Program. Please welcome the contributors of this project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [A2842630 - Nino Fachrurozy](https://github.com/nfach98)
+- [A0040244 - Eldhian Bimantaka Christianto](https://github.com/Eldhianbmntaka)
+- [C1801846 - Sablina Damayanti](https://github.com/sablinadamayanti)
+- [C1031406 - Geraldhi Aditya Putra Mahayadnya](https://github.com/gerald-apm)
+- [M0040333 - Dympna Tinezsia Adhisti](https://github.com/dhiisti)
+- [M0040318 - Mpu Hambyah Syah Bagaskara Aji](https://github.com/mpuhambyah)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Easeplantz Project 2021. All rights reserved.
