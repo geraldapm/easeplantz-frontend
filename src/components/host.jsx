@@ -1,2 +1,2 @@
-const host = 'https://api.easeplantz.ml/upload';
+const host = "https://api.easeplantz.ga/upload";
 export default host;
