@@ -20,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "pm2 serve build 3000 --spa"
   },
   "eslintConfig": {
     "extends": [
